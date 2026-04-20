@@ -1,9 +1,10 @@
-import { Outlet } from "react-router";
+import { Outlet } from "react-router"
+import { Header } from "./components/header"
 
 export default function AppLayout() {
-  return(
+  return (
     <>
-      <header>Header global</header>
+      <Header />
 
       <main>
         <Outlet />

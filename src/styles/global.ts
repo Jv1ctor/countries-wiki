@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
   *{
@@ -9,5 +9,20 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: sans-serif;
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:focus, a:active {
+  outline: none;
+  }
+
+  ul, ol {
+    list-style: none;
   }
 `

@@ -14,3 +14,4 @@ export const router = createBrowserRouter([
     element: <div>pong</div>,
   },
 ])
+
