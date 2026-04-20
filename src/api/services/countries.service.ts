@@ -1,10 +1,16 @@
 import { api } from "../api"
-import type { AllCountries } from "../dtos/all-countries.dto"
+import type { ListCountriesDto } from "../dtos/list-countries.dto"
 
 export const CountriesService = {
-  async getAll(): Promise<AllCountries> {
-    const route = await api.get<AllCountries>("all")
+  async getAll(): Promise<ListCountriesDto> {
+    const response = await api.get<ListCountriesDto>("all")
 
-    return route.data
+    return response.data
   },
+
+  async getByRegion(region: string): Promise<ListCountriesDto> {
+    const response = await api.get<ListCountriesDto>(`region/${region}`)
+    
+    return response.data
+  } 
 }

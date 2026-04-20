@@ -1,5 +1,6 @@
 
 export const CountryFields = {
+  code: "cca3",
   name: "name",
   capital: "capital",
   population: "population",

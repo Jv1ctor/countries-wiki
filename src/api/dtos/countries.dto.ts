@@ -1,4 +1,5 @@
-export type Countries = {
+export type CountriesDto = {
+  cca3: string
   name: {
     common: string
     official: string

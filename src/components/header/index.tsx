@@ -1,9 +1,13 @@
+import { NavLink } from "react-router"
 import { List, Title, ContainerHeader, StyledLink } from "./styles"
 
 export const Header = () => {
   return (
     <ContainerHeader>
-      <Title>WikiCountries</Title>
+
+      <NavLink to="/">
+        <Title>WikiCountries</Title>
+      </NavLink>
 
       <nav>
         <List>
