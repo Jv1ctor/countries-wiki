@@ -1,10 +1,11 @@
 import styled from "styled-components"
-import { getRegionStyle, type Region } from "../../helpers/getRegionStyle"
+import { getRegionStyle, type Region } from "../../helpers/get-region-style.helper"
 
 export const Card = styled.div`
   max-width: 300px;
   background: ${({ theme }) => theme.colors.surface};
   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 `
 
 export const CardContent = styled.div`

@@ -15,30 +15,51 @@ import {
 
 import MapPin from "../../assets/icons/map-pin.svg"
 import PopulationIcon from "../../assets/icons/population.svg"
+import { formatterNumber } from "../../helpers/formatter-number.helper"
+import { formatterRegion } from "../../helpers/formatter-region.helper"
 
-export const CountryCard = () => {
+type Props = {
+  flag: string
+  flagAlt: string
+  name: string
+  region: string
+  capital: string
+  population: number
+}
+
+export const CountryCard = ({
+  capital,
+  flag,
+  flagAlt,
+  name,
+  population,
+  region,
+}: Props) => {
+  const formattedRegion = formatterRegion(region)
+  const formattedPopulation = formatterNumber(population)
+
   return (
     <>
       <Card>
         <CardImage>
-          <Flag src="https://flagcdn.com/w320/ci.png" alt="flag" />
+          <Flag src={flag} alt={flagAlt} />
         </CardImage>
 
         <CardContent>
           <Horizontal>
-            <CountryName>France</CountryName>
-            <Continent region="europe">Europe</Continent>
+            <CountryName>{name}</CountryName>
+            <Continent region={formattedRegion}>{formattedRegion}</Continent>
           </Horizontal>
 
           <DisplayFlow>
             <MapPinStyled src={MapPin} />
-            <Capital>Paris</Capital>
+            <Capital>{capital}</Capital>
           </DisplayFlow>
 
           <DisplayFlow>
             <PopulationPinStyled src={PopulationIcon} />
             <Population>
-              <p>65.3M</p>
+              <p>{formattedPopulation}</p>
               <p>RESIDENTS</p>
             </Population>
           </DisplayFlow>
