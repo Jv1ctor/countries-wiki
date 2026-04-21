@@ -30,3 +30,7 @@ export const NavLinkStyled = styled(NavLink)`
     transition: .4s ease-out;
   }
 `
+
+export const SearchWrapper = styled.div`
+  margin-bottom: 2rem;
+`

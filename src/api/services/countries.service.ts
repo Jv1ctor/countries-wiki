@@ -16,6 +16,12 @@ export const CountriesService = {
     return response.data
   },
 
+  async getCountryByName(name: string): Promise<ListCountriesDto>{
+    const response = await api.get<ListCountriesDto>(`name/${name}`)
+    
+    return response.data
+  },
+
   async getCountryByCode(code: string): Promise<CountriesInfoDto>{
     const response = await api.get<CountriesInfoDto>(`alpha/${code}`, {
       params: {
