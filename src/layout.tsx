@@ -1,11 +1,11 @@
 import { Outlet } from "react-router"
 import { Header } from "./components/header"
 import { Footer } from "./components/footer"
-import { Main } from "./styles/layout"
+import { LayoutWrapper, Main } from "./styles/layout"
 
 export default function AppLayout() {
   return (
-    <>
+    <LayoutWrapper>
       <Header />
 
       <Main>
@@ -13,6 +13,6 @@ export default function AppLayout() {
       </Main>
 
       <Footer />
-    </>
+    </LayoutWrapper>
   )
 }

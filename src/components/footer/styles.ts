@@ -5,6 +5,7 @@ export const Container = styled.footer`
   background: ${({ theme }) => theme.colors.primary};
   color: #fff;
   padding: 2rem 4rem;
+  margin-top: 0 auto;
 `
 
 export const Content = styled.div`

@@ -9,7 +9,10 @@ export const useSearch = (allCountries: ListCountriesDto) => {
 
   const handleInput = async () => {
     const name = inputRef.current?.value.trim()
-    if (!name) return
+    if (!name) {
+      setCountries(allCountries)
+      return
+    }
 
     try {
       setIsSearch(true)
