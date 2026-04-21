@@ -1,5 +1,5 @@
 
-export const CountryFields = {
+export const CountryFieldsList = {
   code: "cca3",
   name: "name",
   capital: "capital",

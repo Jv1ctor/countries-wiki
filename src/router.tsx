@@ -3,6 +3,8 @@ import AppLayout from "./layout"
 import { Home } from "./pages/home"
 import { allCountriesLoader } from "./loaders/all-countries.loader"
 import { regionCountriesLoader } from "./loaders/region-countries.loader"
+import { Info } from "./pages/info"
+import { getCountryInfo } from "./loaders/get-country-info.loader"
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +12,8 @@ export const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, element: <Home />, loader: allCountriesLoader },
-      { path:"/:region", element: <Home />, loader: regionCountriesLoader}
+      { path: "/:region", element: <Home />, loader: regionCountriesLoader },
+      { path: "/country/:code", element: <Info />, loader: getCountryInfo },
     ],
   },
 ])
